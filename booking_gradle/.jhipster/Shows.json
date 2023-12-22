@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063709",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "shows",
+  "fields": [
+    {
+      "fieldName": "showId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "shw_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "screenId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "scn_id"
+      }
+    },
+    {
+      "fieldName": "showDate",
+      "fieldType": "Instant",
+      "options": {
+        "fieldNameAsDatabaseColumn": "shw_date"
+      }
+    },
+    {
+      "fieldName": "startingTime",
+      "fieldType": "Instant",
+      "options": {
+        "fieldNameAsDatabaseColumn": "strt_time"
+      }
+    },
+    {
+      "fieldName": "endingTime",
+      "fieldType": "Instant",
+      "options": {
+        "fieldNameAsDatabaseColumn": "end_time"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Shows",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

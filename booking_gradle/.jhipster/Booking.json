@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063705",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "booking",
+  "fields": [
+    {
+      "fieldName": "bookingId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "platformId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_plt_id"
+      }
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "usr_id"
+      }
+    },
+    {
+      "fieldName": "paymentId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "pmt_id"
+      }
+    },
+    {
+      "fieldName": "bookingDate",
+      "fieldType": "Instant",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_date"
+      }
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_sts"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Booking",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

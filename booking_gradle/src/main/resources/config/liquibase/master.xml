@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql"/>
+    <property name="clobType" value="longvarchar" dbms="postgresql"/>
+    <property name="blobType" value="bytea" dbms="postgresql"/>
+    <property name="uuidType" value="uuid" dbms="postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063702_added_entity_City.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063703_added_entity_Movie.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063704_added_entity_BookingPlatform.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063705_added_entity_Booking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063706_added_entity_Screen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063707_added_entity_SeatBooking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063708_added_entity_Seat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063709_added_entity_Shows.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063710_added_entity_Theatre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063711_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20231222063712_added_entity_Layout.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

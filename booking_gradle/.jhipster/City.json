@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063702",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "city",
+  "fields": [
+    {
+      "fieldName": "cityId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "cty_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "cityName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "cty_name"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "City",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

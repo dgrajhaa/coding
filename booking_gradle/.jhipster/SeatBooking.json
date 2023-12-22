@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063707",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "seat_book",
+  "fields": [
+    {
+      "fieldName": "seatBookingId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "st_bk_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "bookingId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_id"
+      }
+    },
+    {
+      "fieldName": "seatId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "seat_id"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "SeatBooking",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

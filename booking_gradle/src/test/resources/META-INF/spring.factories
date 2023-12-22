@@ -1,0 +1,1 @@
+org.springframework.test.context.ContextCustomizerFactory = com.inn.ticket.reservation.config.TestContainersSpringContextCustomizerFactory

@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063710",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "theatre",
+  "fields": [
+    {
+      "fieldName": "theatreId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "thtr_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "cityId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "cty_id"
+      }
+    },
+    {
+      "fieldName": "theatreName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "thtr_name"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Theatre",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

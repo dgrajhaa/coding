@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063712",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "layout",
+  "fields": [
+    {
+      "fieldName": "layoutId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "lyt_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "totalRows",
+      "fieldType": "Integer",
+      "options": {
+        "fieldNameAsDatabaseColumn": "ttl_row"
+      }
+    },
+    {
+      "fieldName": "totalColumn",
+      "fieldType": "Integer",
+      "options": {
+        "fieldNameAsDatabaseColumn": "ttl_clmn"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Layout",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

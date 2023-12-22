@@ -1,0 +1,76 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063708",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "seat",
+  "fields": [
+    {
+      "fieldName": "seatId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "seat_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "showId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "shw_id"
+      }
+    },
+    {
+      "fieldName": "rowName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "rw_nam"
+      }
+    },
+    {
+      "fieldName": "seatNo",
+      "fieldType": "Integer",
+      "options": {
+        "fieldNameAsDatabaseColumn": "seat_no"
+      }
+    },
+    {
+      "fieldName": "lock",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "lock"
+      }
+    },
+    {
+      "fieldName": "lockExpiresOn",
+      "fieldType": "Instant",
+      "options": {
+        "fieldNameAsDatabaseColumn": "lck_exp"
+      }
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "sts"
+      }
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "Integer",
+      "options": {
+        "fieldNameAsDatabaseColumn": "ver"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Seat",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

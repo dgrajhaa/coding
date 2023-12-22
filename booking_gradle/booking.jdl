@@ -1,0 +1,90 @@
+@service(serviceImpl)
+entity City(city) {
+	@Id @fieldNameAsDatabaseColumn(cty_id) cityId Long
+	@fieldNameAsDatabaseColumn(cty_name) cityName String
+}
+
+@service(serviceImpl)
+entity Movie(movie) {
+	@Id @fieldNameAsDatabaseColumn(mov_id) movieId Long
+	@fieldNameAsDatabaseColumn(mov_name) movieName String
+	@fieldNameAsDatabaseColumn(thtr_id) theatreId Long
+}
+
+@service(serviceImpl)
+entity BookingPlatform(bkg_plt) {
+	@Id @fieldNameAsDatabaseColumn(bkg_plt_id) platformId Long
+	@fieldNameAsDatabaseColumn(thtr_id) theatreId Long
+	@fieldNameAsDatabaseColumn(plt_name) platformName String
+}
+
+@service(serviceImpl)
+entity Booking(booking) {
+	@Id @fieldNameAsDatabaseColumn(bkg_id) bookingId Long
+	@fieldNameAsDatabaseColumn(bkg_plt_id) platformId Long
+	@fieldNameAsDatabaseColumn(usr_id) userId Long
+	@fieldNameAsDatabaseColumn(pmt_id) paymentId Long
+	@fieldNameAsDatabaseColumn(bkg_date) bookingDate Instant
+	@fieldNameAsDatabaseColumn(bkg_sts) status String
+}
+
+@service(serviceImpl)
+entity Screen(screen) {
+	@Id @fieldNameAsDatabaseColumn(scn_id) screenId Long
+	@fieldNameAsDatabaseColumn(lyt_id) layoutId Long
+	@fieldNameAsDatabaseColumn(thtr_id) screenName Long
+	@fieldNameAsDatabaseColumn(scn_name) screenName String
+}
+
+@service(serviceImpl)
+entity SeatBooking(seat_book) {
+	@Id @fieldNameAsDatabaseColumn(st_bk_id) seatBookingId Long
+	@fieldNameAsDatabaseColumn(bkg_id) bookingId Long
+	@fieldNameAsDatabaseColumn(seat_id) seatId Long
+}
+
+@service(serviceImpl)
+entity Seat(seat) {
+	@Id @fieldNameAsDatabaseColumn(seat_id) seatId Long
+	@fieldNameAsDatabaseColumn(shw_id) showId Long
+	@fieldNameAsDatabaseColumn(rw_nam) rowName String
+	@fieldNameAsDatabaseColumn(seat_no) seatNo Integer
+	@fieldNameAsDatabaseColumn(lock) lock String
+	@fieldNameAsDatabaseColumn(lck_exp) lockExpiresOn Instant
+	@fieldNameAsDatabaseColumn(sts) status String
+	@fieldNameAsDatabaseColumn(ver) version Integer
+	
+}
+
+@service(serviceImpl)
+entity Shows(shows) {
+	@Id @fieldNameAsDatabaseColumn(shw_id) showId Long
+	@fieldNameAsDatabaseColumn(scn_id) screenId Long
+	@fieldNameAsDatabaseColumn(shw_date) showDate Instant
+	@fieldNameAsDatabaseColumn(strt_time) startingTime Instant
+	@fieldNameAsDatabaseColumn(end_time) endingTime Instant
+	
+}
+
+@service(serviceImpl)
+entity Theatre(theatre) {
+	@Id @fieldNameAsDatabaseColumn(thtr_id) theatreId Long
+	@fieldNameAsDatabaseColumn(cty_id) cityId Long
+	@fieldNameAsDatabaseColumn(thtr_name) theatreName String
+}
+
+@service(serviceImpl)
+entity Customer(customer) {
+	@Id @fieldNameAsDatabaseColumn(usr_id) userId Long
+	@fieldNameAsDatabaseColumn(usr_f_nam) firstName String
+	@fieldNameAsDatabaseColumn(usr_l_nam) lastName String
+	@fieldNameAsDatabaseColumn(email) email String
+	@fieldNameAsDatabaseColumn(mobile) mobileNo Long
+}
+
+@service(serviceImpl)
+entity Layout(layout) {
+	@Id @fieldNameAsDatabaseColumn(lyt_id) layoutId Long
+	@fieldNameAsDatabaseColumn(ttl_row) totalRows Integer
+	@fieldNameAsDatabaseColumn(ttl_clmn) totalColumn Integer
+}

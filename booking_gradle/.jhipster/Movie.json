@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063703",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "movie",
+  "fields": [
+    {
+      "fieldName": "movieId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "mov_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "movieName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "mov_name"
+      }
+    },
+    {
+      "fieldName": "theatreId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "thtr_id"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Movie",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

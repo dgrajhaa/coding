@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063706",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "screen",
+  "fields": [
+    {
+      "fieldName": "screenId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "scn_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "layoutId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "lyt_id"
+      }
+    },
+    {
+      "fieldName": "screenName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "scn_name"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Screen",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

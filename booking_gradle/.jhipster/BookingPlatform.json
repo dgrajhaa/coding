@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063704",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "bkg_plt",
+  "fields": [
+    {
+      "fieldName": "platformId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "bkg_plt_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "theatreId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "thtr_id"
+      }
+    },
+    {
+      "fieldName": "platformName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "plt_name"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "BookingPlatform",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

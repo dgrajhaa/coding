@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222063711",
+  "clientRootFolder": "booking",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "usr_id",
+        "id": true
+      }
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "usr_f_nam"
+      }
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "usr_l_nam"
+      }
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "options": {
+        "fieldNameAsDatabaseColumn": "email"
+      }
+    },
+    {
+      "fieldName": "mobileNo",
+      "fieldType": "Long",
+      "options": {
+        "fieldNameAsDatabaseColumn": "mobile"
+      }
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "booking",
+  "name": "Customer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
