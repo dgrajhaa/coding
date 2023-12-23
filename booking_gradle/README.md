@@ -26,14 +26,22 @@ POST - http://localhost:8081/api/request-booking]
 request body -
  {
   
-    city: "Chennai",
-    theatre: "PVR",
-    Screen: "AUDI 1",
-    movieName: "Avenger end game",
-    showDate: "25-12.2023",
-    show: "9:30 AM",
-    platformName: "Bookmyshow",
-    seatDetails: [{"A", [1,2,3]}, {"B", 1, 2}]
+    "city": "Chennai",
+    "theatre": "PVR",
+    "Screen": "AUDI 1",
+    "movieName": "Avenger end game",
+    "showDate": "25-12.2023",
+    "show": "9:30 AM",
+    "platformName": "Bookmyshow",
+    "seatDetails": [
+                      { "seatRow": "A", 
+                        "seatNumbers": [1,2,3]
+                       },
+                       {
+                         "seatRow": "A", 
+                         "seatNumbers": [1,2]
+                        }
+                    ]
 }
 ```
 
