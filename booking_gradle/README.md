@@ -8,7 +8,7 @@
     * Final booking
     * create bidirectional and unidirectional relationship in entity
     * API to configure application data (config data like create theatre, screen layout, shows)
-    * optimize the code further
+    * optimize the code and design to meet further usecases
 
 ## Steps to run the application
 
