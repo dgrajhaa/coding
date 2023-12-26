@@ -1,6 +1,6 @@
 # Prerequisites
 
- * jdk19, postgres, any ide
+ * jdk17, postgres, any ide
  * optional - docker for desktop, jhipster, node, git
 
 # TODO LIST
