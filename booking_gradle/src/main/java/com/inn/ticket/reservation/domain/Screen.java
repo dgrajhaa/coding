@@ -1,6 +1,10 @@
 package com.inn.ticket.reservation.domain;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
+import org.hibernate.annotations.JoinColumnsOrFormulas;
+
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -22,8 +26,19 @@ public class Screen implements Serializable {
     @Column(name = "lyt_id")
     private Long layoutId;
 
+    @Column(name = "thtr_id", insertable = false, updatable = false)
+    private Long theatreId;
+
     @Column(name = "scn_name")
     private String screenName;
+
+    @ManyToOne
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "thtr_id", referencedColumnName = "thtr_id", nullable = false))})
+    private Theatre theatre;
+
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "screen", fetch   = FetchType.LAZY)
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "scn_id", referencedColumnName = "scn_id", nullable = false))})
+    private List<Shows> shows;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 

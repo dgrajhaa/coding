@@ -19,10 +19,10 @@ public class Customer implements Serializable {
     @Column(name = "usr_id")
     private Long userId;
 
-    @Column(name = "usr_f_nam")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "usr_l_nam")
+    @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "email")

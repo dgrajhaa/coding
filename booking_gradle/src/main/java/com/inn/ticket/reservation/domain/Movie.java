@@ -1,6 +1,10 @@
 package com.inn.ticket.reservation.domain;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
+import org.hibernate.annotations.JoinColumnsOrFormulas;
+
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -22,8 +26,13 @@ public class Movie implements Serializable {
     @Column(name = "mov_name")
     private String movieName;
 
-    @Column(name = "thtr_id")
+    @Column(name = "thtr_id", insertable = false, updatable = false)
     private Long theatreId;
+
+    @ManyToOne
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "thtr_id", referencedColumnName = "thtr_id", nullable = false))})
+    private Theatre theatre;
+
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 

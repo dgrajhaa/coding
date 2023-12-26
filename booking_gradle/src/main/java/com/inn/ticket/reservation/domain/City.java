@@ -1,6 +1,10 @@
 package com.inn.ticket.reservation.domain;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
+import org.hibernate.annotations.JoinColumnsOrFormulas;
+
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -23,6 +27,10 @@ public class City implements Serializable {
     private String cityName;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "city", fetch   = FetchType.LAZY)
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "cty_id", referencedColumnName = "cty_id", nullable = false))})
+    private List<Theatre> theatres;
 
     public Long getCityId() {
         return this.cityId;

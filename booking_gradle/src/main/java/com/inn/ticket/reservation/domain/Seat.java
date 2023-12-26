@@ -1,7 +1,11 @@
 package com.inn.ticket.reservation.domain;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
+import org.hibernate.annotations.JoinColumnsOrFormulas;
+
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -20,7 +24,7 @@ public class Seat implements Serializable {
     @Column(name = "seat_id")
     private Long seatId;
 
-    @Column(name = "shw_id")
+    @Column(name = "shw_id", insertable = false, updatable = false)
     private Long showId;
 
     @Column(name = "rw_nam")
@@ -29,10 +33,10 @@ public class Seat implements Serializable {
     @Column(name = "seat_no")
     private Integer seatNo;
 
-    @Column(name = "lock")
+    @Column(name = "locked")
     private String lock;
 
-    @Column(name = "lck_exp")
+    @Column(name = "lck_exp_on")
     private Instant lockExpiresOn;
 
     @Column(name = "sts")
@@ -40,6 +44,14 @@ public class Seat implements Serializable {
 
     @Column(name = "ver")
     private Integer version;
+
+    @ManyToOne
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "shw_id", referencedColumnName = "shw_id", nullable = false))})
+    private Shows show;
+
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "seat", fetch   = FetchType.LAZY)
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "seat_id", referencedColumnName = "seat_id", nullable = false))})
+    private List<SeatBooking> seatBookings;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 

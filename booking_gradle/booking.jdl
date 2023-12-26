@@ -49,8 +49,8 @@ entity Seat(seat) {
 	@fieldNameAsDatabaseColumn(shw_id) showId Long
 	@fieldNameAsDatabaseColumn(rw_nam) rowName String
 	@fieldNameAsDatabaseColumn(seat_no) seatNo Integer
-	@fieldNameAsDatabaseColumn(lock) lock String
-	@fieldNameAsDatabaseColumn(lck_exp) lockExpiresOn Instant
+	@fieldNameAsDatabaseColumn(locked) lock String
+	@fieldNameAsDatabaseColumn(lck_exp_on) lockExpiresOn Instant
 	@fieldNameAsDatabaseColumn(sts) status String
 	@fieldNameAsDatabaseColumn(ver) version Integer
 	
@@ -76,8 +76,8 @@ entity Theatre(theatre) {
 @service(serviceImpl)
 entity Customer(customer) {
 	@Id @fieldNameAsDatabaseColumn(usr_id) userId Long
-	@fieldNameAsDatabaseColumn(usr_f_nam) firstName String
-	@fieldNameAsDatabaseColumn(usr_l_nam) lastName String
+	@fieldNameAsDatabaseColumn(first_name) firstName String
+	@fieldNameAsDatabaseColumn(last_name) lastName String
 	@fieldNameAsDatabaseColumn(email) email String
 	@fieldNameAsDatabaseColumn(mobile) mobileNo Long
 }

@@ -1,7 +1,11 @@
 package com.inn.ticket.reservation.domain;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
+import org.hibernate.annotations.JoinColumnsOrFormulas;
+
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -34,6 +38,10 @@ public class Booking implements Serializable {
 
     @Column(name = "bkg_sts")
     private String status;
+
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "booking", fetch   = FetchType.LAZY)
+    @JoinColumnsOrFormulas({@JoinColumnOrFormula(column = @JoinColumn(name = "bkg_id", referencedColumnName = "bkg_id", nullable = false))})
+    private List<SeatBooking> seatBookings;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
